@@ -45,15 +45,15 @@ body {
     width: 174px;
 }
 
-#header {
-    height: 66px;
-}
-
 #loading-mask {
     margin-left: 66px;
-    margin-top: -20px;
+    margin-top: -19px;
     position: absolute;
     visibility: hidden;
+}
+
+#header {
+    height: 66px;
 }
 
 input {
