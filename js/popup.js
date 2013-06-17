@@ -38,6 +38,11 @@ function onLoad() {
 }
 
 function createRequest(keyword) {
+    // retrieves the loading mask and shows it by setting the
+    // visibility property of it
+    var loadingMask = document.getElementById("loading-mask");
+    loadingMask.style.visibility = "visible";
+
     // creates the request url
     var url = "https://secure.flickr.com/services/rest/?"
             + "method=flickr.photos.search&api_key=90485e931f687a9b9c2a66bf58a3861a&text="
@@ -49,16 +54,16 @@ function createRequest(keyword) {
     var request = new XMLHttpRequest();
     request.open("GET", url, true);
 
-    console.info("cenas 1")
-
     // sets the onload event handler
     request.onload = function() {
-        console.info("cenas 2")
-
         // retrieves all the photos from the request as a list
         // of elements and then shows the photos
         var photos = request.responseXML.getElementsByTagName("photo");
         showPhotos(photos);
+
+        // hides the loading mask as the search operation has been
+        // completed with success
+        loadingMask.style.visibility = "hidden";
     }
 
     // sends the request
