@@ -39,23 +39,25 @@ function onLoad() {
 
 function createRequest(keyword) {
     // creates the request url
-    var url = "http://api.flickr.com/services/rest/?"
+    var url = "https://secure.flickr.com/services/rest/?"
             + "method=flickr.photos.search&api_key=90485e931f687a9b9c2a66bf58a3861a&text="
             + keyword
             + "&safe_search=1&content_type=1&sort=relevance&per_page=20";
 
-    // creates the request
+    // creates the request and opens it as a get request
+    // to the remote api endpoint
     var request = new XMLHttpRequest();
-
-    // opens the request
     request.open("GET", url, true);
+
+    console.info("cenas 1")
 
     // sets the onload event handler
     request.onload = function() {
-        // retrieves all the photos from the request
-        var photos = request.responseXML.getElementsByTagName("photo");
+        console.info("cenas 2")
 
-        // shows the photos
+        // retrieves all the photos from the request as a list
+        // of elements and then shows the photos
+        var photos = request.responseXML.getElementsByTagName("photo");
         showPhotos(photos);
     }
 
@@ -121,3 +123,5 @@ function constructImageUrl(photo) {
             + photo.getAttribute("server") + "/" + photo.getAttribute("id")
             + "_" + photo.getAttribute("secret") + "_s.jpg";
 }
+
+window.onload = onLoad;
