@@ -111,7 +111,7 @@ function constructImageShowUrl(photo) {
 
 /**
  * Constructs the image url from the photo.
- * 
+ *
  * @param {Map}
  *            photo The photo map value.
  * @return {String} The image constructed image url.
