@@ -43,9 +43,10 @@ function createRequest(keyword) {
     var loadingMask = document.getElementById("loading-mask");
     loadingMask.style.visibility = "visible";
 
-    // creates the request url
-    var url = "https://secure.flickr.com/services/rest/?"
-            + "method=flickr.photos.search&api_key=90485e931f687a9b9c2a66bf58a3861a&text="
+    // creates the request url, that is going to be used to
+    // request public photos from flickr (as expected)
+    var url = "https://api.flickr.com/services/rest/?"
+            + "method=flickr.photos.search&api_key=bb5cf5d605030d0d2114bfe59ff692db&text="
             + keyword
             + "&safe_search=1&content_type=1&sort=relevance&per_page=20";
 
@@ -118,7 +119,7 @@ function constructImageShowUrl(photo) {
 
 /**
  * Constructs the image url from the photo.
- *
+ * 
  * @param {Map}
  *            photo The photo map value.
  * @return {String} The image constructed image url.
