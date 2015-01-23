@@ -23,6 +23,8 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
+var API_KEY = "bb5cf5d605030d0d2114bfe59ff692db";
+
 function onLoad() {
     // retrieves the seach box element
     var searchBox = document.getElementById("search-box");
@@ -46,7 +48,7 @@ function createRequest(keyword) {
     // creates the request url, that is going to be used to
     // request public photos from flickr (as expected)
     var url = "https://api.flickr.com/services/rest/?"
-            + "method=flickr.photos.search&api_key=bb5cf5d605030d0d2114bfe59ff692db&text="
+            + "method=flickr.photos.search&api_key=" + API_KEY + "&text="
             + keyword
             + "&safe_search=1&content_type=1&sort=relevance&per_page=20";
 
