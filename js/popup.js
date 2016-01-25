@@ -47,10 +47,8 @@ function createRequest(keyword) {
 
     // creates the request url, that is going to be used to
     // request public photos from flickr (as expected)
-    var url = "https://api.flickr.com/services/rest/?"
-            + "method=flickr.photos.search&api_key=" + API_KEY + "&text="
-            + keyword
-            + "&safe_search=1&content_type=1&sort=relevance&per_page=20";
+    var url = "https://api.flickr.com/services/rest/?" + "method=flickr.photos.search&api_key=" + API_KEY + "&text=" +
+        keyword + "&safe_search=1&content_type=1&sort=relevance&per_page=20";
 
     // creates the request and opens it as a get request
     // to the remote api endpoint
@@ -98,8 +96,8 @@ function generatePhoto(photo) {
     image.onclick = function() {
         // creates the tab with the url
         chrome.tabs.create({
-                    url : imageShowUrl
-                });
+            url: imageShowUrl
+        });
     };
 
     // sets the image source attribute and then sets
@@ -115,8 +113,7 @@ function generatePhoto(photo) {
 }
 
 function constructImageShowUrl(photo) {
-    return "http://www.flickr.com/photos/" + photo.getAttribute("owner") + "/"
-            + photo.getAttribute("id");
+    return "http://www.flickr.com/photos/" + photo.getAttribute("owner") + "/" + photo.getAttribute("id");
 }
 
 /**
@@ -127,9 +124,8 @@ function constructImageShowUrl(photo) {
  * @return {String} The image constructed image url.
  */
 function constructImageUrl(photo) {
-    return "http://farm" + photo.getAttribute("farm") + ".static.flickr.com/"
-            + photo.getAttribute("server") + "/" + photo.getAttribute("id")
-            + "_" + photo.getAttribute("secret") + "_s.jpg";
+    return "http://farm" + photo.getAttribute("farm") + ".static.flickr.com/" + photo.getAttribute("server") + "/" +
+        photo.getAttribute("id") + "_" + photo.getAttribute("secret") + "_s.jpg";
 }
 
 window.onload = onLoad;
