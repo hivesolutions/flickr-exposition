@@ -1,5 +1,5 @@
 // Hive Chrome Extensions
-// Copyright (c) 2008-2015 Hive Solutions Lda.
+// Copyright (c) 2008-2016 Hive Solutions Lda.
 //
 // This file is part of Hive Chrome Extensions.
 //
@@ -20,7 +20,7 @@
 // __version__   = 1.0.0
 // __revision__  = $LastChangedRevision$
 // __date__      = $LastChangedDate$
-// __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
+// __copyright__ = Copyright (c) 2008-2016 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
 var API_KEY = "bb5cf5d605030d0d2114bfe59ff692db";
