@@ -32,7 +32,7 @@ function onLoad() {
     // registers the key press handler
     searchBox.onkeypress = function(event) {
         // in case the key it's enter
-        if (event.keyCode == "13") {
+        if (event.keyCode === "13") {
             // creates a request with the search box value
             createRequest(searchBox.value);
         }
