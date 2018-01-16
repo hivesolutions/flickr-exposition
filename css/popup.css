@@ -33,8 +33,12 @@ body {
     min-width: 350px;
     overflow-x: hidden;
     text-align: center;
+    user-select: -moz-none;
+    -o-user-select: -moz-none;
+    -ms-user-select: -moz-none;
     -moz-user-select: -moz-none;
-    -khtml-user-select: none;
+    -khtml-user-select: -moz-none;
+    -webkit-user-select: -moz-none;
 }
 
 #search-box {
@@ -59,15 +63,26 @@ body {
 input {
     border: 1px solid #dddddd;
     box-shadow: inset 0px 2px 2px #f9f9f9;
+    -o-box-shadow: inset 0px 2px 2px #f9f9f9;
+    -ms-box-shadow: inset 0px 2px 2px #f9f9f9;
     -moz-box-shadow: inset 0px 2px 2px #f9f9f9;
+    -khtml-box-shadow: inset 0px 2px 2px #f9f9f9;
     -webkit-box-shadow: inset 0px 2px 2px #f9f9f9;
     outline: none;
+    -o-outline: none;
+    -ms-outline: none;
+    -moz-outline: none;
+    -khtml-outline: none;
+    -webkit-outline: none;
 }
 
 input:focus {
     border-color: #3668c6;
     box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
     -moz-box-shadow: none;
+    -khtml-box-shadow: none;
     -webkit-box-shadow: none;
 }
 
@@ -82,19 +97,35 @@ input:focus {
 .thumbnail {
     border: 1px solid #2d2d2d;
     box-shadow: 0px 1px 6px #cccccc;
+    -o-box-shadow: 0px 1px 6px #cccccc;
+    -ms-box-shadow: 0px 1px 6px #cccccc;
     -moz-box-shadow: 0px 1px 6px #cccccc;
+    -khtml-box-shadow: 0px 1px 6px #cccccc;
     -webkit-box-shadow: 0px 1px 6px #cccccc;
     cursor: pointer;
     height: 75px;
     margin: 5px 5px 5px 5px;
     opacity: 0.5;
+    -o-opacity: 0.5;
+    -ms-opacity: 0.5;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    -webkit-opacity: 0.5;
     vertical-align: middle;
     width: 75px;
 }
 
 .thumbnail:hover {
     box-shadow: 0px 1px 6px #999999;
+    -o-box-shadow: 0px 1px 6px #999999;
+    -ms-box-shadow: 0px 1px 6px #999999;
     -moz-box-shadow: 0px 1px 6px #999999;
+    -khtml-box-shadow: 0px 1px 6px #999999;
     -webkit-box-shadow: 0px 1px 6px #999999;
     opacity: 1.0;
+    -o-opacity: 1.0;
+    -ms-opacity: 1.0;
+    -moz-opacity: 1.0;
+    -khtml-opacity: 1.0;
+    -webkit-opacity: 1.0;
 }
